@@ -20,7 +20,7 @@
       "dom"
     ],
     "paths": {
-      "@material-extended/mde": [
+      "@fgrid-ngx/mde": [
         "dist/material-extended/mde",
         "dist/material-extended/mde/mde"
       ]

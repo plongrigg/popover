@@ -1,10 +1,26 @@
 {
-  "name": "@material-extended/mde",
+  "name": "@fgrid-ngx/mde",
+  "description": "Angular Material Extended",
   "version": "3.0.3",
+  "author": {
+    "name": "Joe Jordan Brown",
+    "email": "joe.jordan.brown@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plongrigg/popover"
+  },
+  "bugs": {
+    "url": "https://github.com/plongrigg/popover/issues"
+  },
   "peerDependencies": {
-    "@angular/animations": "^8.0.0 || ^9.0.0-0",
-    "@angular/cdk": "^8.0.0 || ^9.0.0-0",
-    "@angular/common": "^8.0.0 || ^9.0.0-0",
-    "@angular/core": "^8.0.0 || ^9.0.0-0"
+    "@angular/animations": "^8.0.0 || ^9.0.0-0 || >= 10.0.0",
+    "@angular/cdk": "^8.0.0 || ^9.0.0-0 || >= 10.0.0",
+    "@angular/common": "^8.0.0 || ^9.0.0-0 || >= 10.0.0",
+    "@angular/core": "^8.0.0 || ^9.0.0-0 || >= 10.0.0"
+  },
+  "dependencies": {
+    "tslib": "*"
   }
 }

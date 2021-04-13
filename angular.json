@@ -128,7 +128,7 @@
         }
       }
     },
-    "@material-extended/mde": {
+    "@fgrid-ngx/mde": {
       "root": "projects/material-extended/mde",
       "sourceRoot": "projects/material-extended/mde/src",
       "projectType": "library",

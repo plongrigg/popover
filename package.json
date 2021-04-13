@@ -1,5 +1,5 @@
 {
-  "name": "@material-extended/mde",
+  "name": "@fgrid-ngx/mde",
   "description": "Angular Material Extended",
   "version": "3.0.3",
   "author": {
@@ -33,8 +33,8 @@
     "start": "npm run build:library && npm run serve",
     "serve": "ng serve --aot",
     "build": "ng build",
-    "build:library": "ng build @material-extended/mde",
-    "build:library:prod": "ng build @material-extended/mde --prod",
+    "build:library": "ng build @fgrid-ngx/mde",
+    "build:library:prod": "ng build @fgrid-ngx/mde --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
