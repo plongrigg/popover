@@ -240,7 +240,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     openPopover(): void {
         if (!this._popoverOpen && !this._halt) {
             this._createOverlay().attach(this._portal);
-    
+
             this._subscribeToBackdrop();
             this._subscribeToDetachments();
 
@@ -250,7 +250,6 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
 
     /** Closes the popover. */
     closePopover(): void {
-      console.log('close');
         if (this._overlayRef) {
           this._overlayRef.detach();
           this._resetPopover();
@@ -345,7 +344,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     private _setPopoverOpened(): void {
       if (!this._popoverOpen) {
         this._popoverOpen = true;
-        
+
         this.popoverOpened.next();
         this.opened.emit()
       }
@@ -355,7 +354,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     private _setPopoverClosed(): void {
       if (this._popoverOpen) {
         this._popoverOpen = false;
-        
+
         this.popoverClosed.next();
         this.closed.emit();
       }
