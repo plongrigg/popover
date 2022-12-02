@@ -1,7 +1,7 @@
 {
   "name": "@fgrid-ngx/mde",
   "description": "Angular Material Extended",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "author": {
     "name": "Joe Jordan Brown",
     "email": "joe.jordan.brown@gmail.com"
@@ -63,14 +63,13 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.3.10",
-    "@angular-devkit/build-ng-packagr": "~0.1002.4",
+    "@angular-devkit/build-ng-packagr": "^0.1002.0",
     "@angular/cli": "~13.3.10",
     "@angular/compiler-cli": "^13.3.12",
     "@angular/language-service": "^13.3.12",
     "@types/jasmine": "~3.5.10",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
-    "codelyzer": "^5.2.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.4.1",
