@@ -125,12 +125,12 @@
     ora "4.0.3"
     rxjs "6.5.4"
 
-"@angular/animations@^9.0.0 || ^10.0.0-0", "@angular/animations@^9.1.10", "@angular/animations@9.1.10":
+"@angular/animations@^8.0.0 || ^9.0.0-0 || >= 10.0.0", "@angular/animations@^9.0.0 || ^10.0.0-0", "@angular/animations@^9.1.10", "@angular/animations@9.1.10":
   version "9.1.10"
   resolved "https://registry.npmjs.org/@angular/animations/-/animations-9.1.10.tgz"
   integrity sha512-xuiL2iE8vka3IZpvwnOYDhfKKn9xKB+qyn7mcWzr6xnFP3UPfxN/1HuDJYgtwd+KXtTZmzlsm8orh+DZ3MGxbA==
 
-"@angular/cdk@^9.2.4", "@angular/cdk@9.2.4":
+"@angular/cdk@^8.0.0 || ^9.0.0-0 || >= 10.0.0", "@angular/cdk@^9.2.4", "@angular/cdk@9.2.4":
   version "9.2.4"
   resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-9.2.4.tgz"
   integrity sha512-iw2+qHMXHYVC6K/fttHeNHIieSKiTEodVutZoOEcBu9rmRTGbLB26V/CRsfIRmA1RBk+uFYWc6UQZnMC3RdnJQ==
@@ -163,7 +163,7 @@
     universal-analytics "0.4.20"
     uuid "7.0.2"
 
-"@angular/common@^9.0.0 || ^10.0.0-0", "@angular/common@^9.1.10", "@angular/common@9.1.10":
+"@angular/common@^8.0.0 || ^9.0.0-0 || >= 10.0.0", "@angular/common@^9.0.0 || ^10.0.0-0", "@angular/common@^9.1.10", "@angular/common@9.1.10":
   version "9.1.10"
   resolved "https://registry.npmjs.org/@angular/common/-/common-9.1.10.tgz"
   integrity sha512-qX7ZUIwRkQi/kO6aKmpa8iGdkLXfe+80D+svC02x5PvafdQAcuBlUQQkrr1XapBqYE/Nu2GK0yYmvpa2CzxjPQ==
@@ -191,7 +191,7 @@
   resolved "https://registry.npmjs.org/@angular/compiler/-/compiler-9.1.10.tgz"
   integrity sha512-VlyTVK9elvtKGXxrkW9BWfKYRfeqXVLR3erukv03vy9u/pZppkG1xJ32SgAPKzYckGRV3kKHP6B7ZOXWMb9cog==
 
-"@angular/core@^9.0.0 || ^10.0.0-0", "@angular/core@^9.1.10", "@angular/core@>=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0", "@angular/core@9.1.10":
+"@angular/core@^8.0.0 || ^9.0.0-0 || >= 10.0.0", "@angular/core@^9.0.0 || ^10.0.0-0", "@angular/core@^9.1.10", "@angular/core@>=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0", "@angular/core@9.1.10":
   version "9.1.10"
   resolved "https://registry.npmjs.org/@angular/core/-/core-9.1.10.tgz"
   integrity sha512-pp8g0razdSi3HzSBHRzBdn5WmnVJZ5IF+sWuApvplnl4edBO0CFdZAKALmRgjctRD9y9aVPXhkEi17Spiip9aA==
@@ -985,6 +985,13 @@
     "@babel/helper-validator-identifier" "^7.10.1"
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
+
+"@fgrid-ngx/mde@*":
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/@fgrid-ngx/mde/-/mde-3.0.3.tgz"
+  integrity sha512-NEeFYSh6yiKqOMcswLp89BFBGPOuF3Z/9zGz3u5CnJRzXoROr3oPbbA3R7dnjxTtnXZ7dGB44Kb4akslCQKctA==
+  dependencies:
+    tslib "*"
 
 "@istanbuljs/schema@^0.1.2":
   version "0.1.2"
@@ -9733,7 +9740,7 @@ ts-node@~8.3.0:
     source-map-support "^0.5.6"
     yn "^3.0.0"
 
-tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3, tslib@1.11.1:
+tslib@*, tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3, tslib@1.11.1:
   version "1.11.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.11.1.tgz"
   integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
