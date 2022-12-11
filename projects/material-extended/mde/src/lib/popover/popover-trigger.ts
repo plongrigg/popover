@@ -11,6 +11,7 @@ import {
   HostListener,
   HostBinding,
   ChangeDetectorRef,
+  Inject,
 } from '@angular/core';
 
 import { isFakeMousedownFromScreenReader } from '@angular/cdk/a11y';
@@ -32,6 +33,7 @@ import { MdePopoverPanel, MdeTarget } from './popover-interfaces';
 import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent, MdePopoverScrollStrategy } from './popover-types';
 import { throwMdePopoverMissingError } from './popover-errors';
 import { takeUntil } from 'rxjs/operators';
+import { DOCUMENT } from '@angular/common';
 
 
 
@@ -116,6 +118,9 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     /** Popover backdrop close on click */
     @Input('mdePopoverBackdropCloseOnClick') backdropCloseOnClick = true;
 
+    /** Propogate a click on the backdrop, which closes the popover, to an underlying component */
+    @Input('mdePropogateBackdropClick') backdropPropogateClick = false;
+
     /** Event emitted when the associated popover is opened. */
     @Output() opened = new EventEmitter<void>();
 
@@ -126,7 +131,8 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     constructor(private _overlay: Overlay, public _elementRef: ElementRef,
               private _viewContainerRef: ViewContainerRef,
               @Optional() private _dir: Directionality,
-              private _changeDetectorRef: ChangeDetectorRef) { }
+              private _changeDetectorRef: ChangeDetectorRef,
+              @Inject(DOCUMENT) private document: Document) { }
 
     ngAfterViewInit() {
         this._checkPopover();
@@ -297,12 +303,24 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
             takeUntil(this.popoverClosed),
             takeUntil(this._onDestroy),
           )
-          .subscribe(() => {
+          .subscribe((event: MouseEvent) => {
             this.popover._emitCloseEvent();
+            if(this.propogateBackdropClick) {
+              this.propogateBackdropClick(event);
+            }
           });
         }
       }
     }
+
+    /**
+     * Propogate a click on the backdrop to underlying element.  At this point the backdrop should have
+     * been removed from the DOM
+     */
+    private propogateBackdropClick(event: MouseEvent): void {
+      setTimeout(() => (this.document.elementFromPoint(event.pageX, event.pageY) as HTMLElement)?.click());
+    }
+
 
     private _subscribeToDetachments(): void {
       if (this._overlayRef) {
