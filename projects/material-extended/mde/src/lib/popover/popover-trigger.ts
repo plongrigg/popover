@@ -305,7 +305,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
           )
           .subscribe((event: MouseEvent) => {
             this.popover._emitCloseEvent();
-            if(this.propogateBackdropClick) {
+            if(this.backdropPropogateClick) {
               this.propogateBackdropClick(event);
             }
           });
